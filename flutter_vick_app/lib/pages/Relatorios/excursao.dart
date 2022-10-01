@@ -28,24 +28,19 @@ class _HomeState extends State<Excursao> {
       appBar: AppBar(
         title: const Text('Retorno Reservas'),
       ),
-      body: _excursaoModel == null || _excursaoModel!.isEmpty
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
-          : ListView.builder(
-              itemCount: _excursaoModel!.length,
-              itemBuilder: (context, index) {
-                return Card(
-                  margin: const EdgeInsets.symmetric(vertical: 5),
-                  child: ListTile(
-                    title: Text(_excursaoModel![index].nome),
-                    subtitle: Text(_excursaoModel![index].nomeEvento),
-                    trailing:
-                        Text(_excursaoModel![index].idexcursao.toString()),
-                  ),
-                );
-              },
+      body: new ListView.builder(
+        itemCount: _excursaoModel == null ? 0 : _excursaoModel!.length,
+        itemBuilder: (BuildContext context, int index) {
+          return new Card(
+            margin: const EdgeInsets.symmetric(vertical: 5),
+            child: ListTile(
+              title: Text(_excursaoModel![index].nome),
+              subtitle: Text(_excursaoModel![index].nomeEvento),
+              trailing: Text(_excursaoModel![index].idexcursao.toString()),
             ),
+          );
+        },
+      ),
     );
   }
 }

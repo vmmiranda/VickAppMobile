@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vick_app/pages/home.dart';
-import 'package:flutter_vick_app/pages/pagamento.dart';
-import 'package:flutter_vick_app/pages/usuarios.dart';
+import 'package:flutter_vick_app/pages/Relatorios/cliente.dart';
+import 'package:flutter_vick_app/pages/Navegacao/navegacao.dart';
+import 'package:flutter_vick_app/pages/Relatorios/clientes_busca.dart';
+import 'package:flutter_vick_app/pages/Relatorios/homebusca.dart';
+import 'package:flutter_vick_app/pages/Relatorios/pagamento.dart';
+import 'package:flutter_vick_app/pages/Relatorios/usuarios.dart';
 
-import 'pages/excursao.dart';
+import 'pages/Relatorios/excursao.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -26,7 +29,7 @@ class PrimeiraRota extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomePage()),
+              MaterialPageRoute(builder: (context) => HomePageFind()),
             );
           },
         ),

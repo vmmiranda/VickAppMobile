@@ -23,4 +23,9 @@ class ApiService {
     var url = Uri.parse(ApiConstants.baseUrl + ApiConstants.pagamentoEndpoint);
     return await http.get(url);
   }
+
+  static Future getCliente() async {
+    var url = Uri.parse(ApiConstants.baseUrl + ApiConstants.clienteEndpoint);
+    return await http.get(url);
+  }
 }
