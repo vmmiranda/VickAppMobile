@@ -1,5 +1,8 @@
 import 'dart:convert';
 
+List<ClienteModel> clienteModelFromJson(String str) => List<ClienteModel>.from(
+    json.decode(str).map((x) => ClienteModel.fromJson(x)));
+
 class ClienteModel {
   String nome = "";
   String cidade = "";

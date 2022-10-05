@@ -5,12 +5,12 @@ import 'package:flutter_vick_app/model/clienteModel.dart';
 import 'package:flutter_vick_app/service/api_service.dart';
 import 'package:intl/intl.dart';
 
-class HomePage extends StatefulWidget {
+class Cliente extends StatefulWidget {
   @override
-  _HomePageState createState() => new _HomePageState();
+  _Cliente createState() => new _Cliente();
 }
 
-class _HomePageState extends State<HomePage> {
+class _Cliente extends State<Cliente> {
   var clientes = [];
   _getCliente() {
     ApiService.getCliente().then((response) {
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  _HomePageState() {
+  _Cliente() {
     _getCliente();
   }
 

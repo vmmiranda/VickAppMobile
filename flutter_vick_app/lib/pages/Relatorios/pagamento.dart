@@ -9,10 +9,10 @@ class Pagamento extends StatefulWidget {
   const Pagamento({Key? key}) : super(key: key);
 
   @override
-  _BuildListViewState createState() => _BuildListViewState();
+  _Pagamento createState() => _Pagamento();
 }
 
-class _BuildListViewState extends State<Pagamento> {
+class _Pagamento extends State<Pagamento> {
   var pagamento = [];
   _getPagamentos() {
     ApiService.getPagamento().then((response) {
@@ -24,9 +24,10 @@ class _BuildListViewState extends State<Pagamento> {
     });
   }
 
-  _BuildListViewState() {
+  _Pagamento() {
     _getPagamentos();
   }
+
   @override
   Widget build(BuildContext context) {
     NumberFormat formatter = NumberFormat("00.00");

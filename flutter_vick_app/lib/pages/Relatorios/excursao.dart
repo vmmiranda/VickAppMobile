@@ -6,10 +6,10 @@ class Excursao extends StatefulWidget {
   const Excursao({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _Excursao createState() => _Excursao();
 }
 
-class _HomeState extends State<Excursao> {
+class _Excursao extends State<Excursao> {
   late List<ExcursaoModel>? _excursaoModel = [];
   @override
   void initState() {

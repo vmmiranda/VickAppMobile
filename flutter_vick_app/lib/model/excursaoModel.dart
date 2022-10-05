@@ -4,9 +4,6 @@ List<ExcursaoModel> excursaoModelFromJson(String str) =>
     List<ExcursaoModel>.from(
         json.decode(str).map((x) => ExcursaoModel.fromJson(x)));
 
-String userModelToJson(List<ExcursaoModel> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
 class ExcursaoModel {
   ExcursaoModel(
       {required this.idexcursao,

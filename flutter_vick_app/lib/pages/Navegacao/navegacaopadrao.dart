@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 
 import 'nova_pagina.dart';
 
-class Navegacao extends StatefulWidget {
+class NavegacaoPadrao extends StatefulWidget {
   @override
-  _Navegacao createState() => _Navegacao();
+  _NavegacaoPadrao createState() => _NavegacaoPadrao();
 }
 
-class _Navegacao extends State<Navegacao> {
+class _NavegacaoPadrao extends State<NavegacaoPadrao> {
   int _indiceAtual = 0;
   final List<Widget> _telas = [
     NewPageScreen(""),
-    NewPageScreen("Cadastros"),
-    NewPageScreen("Roteiros"),
-    NewPageScreen("Relatórios")
+    NewPageScreen("Reservas"),
+    NewPageScreen("Viagens"),
+    NewPageScreen("Contato")
   ];
 
   @override
@@ -27,11 +27,12 @@ class _Navegacao extends State<Navegacao> {
         currentIndex: _indiceAtual,
         onTap: onTabTapped,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Cadastros"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.travel_explore), label: "Roteiros"),
+              icon: Icon(Icons.calendar_today), label: "Reservas"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.report), label: "Relatórios"),
+              icon: Icon(Icons.card_travel), label: "Viagens"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.contact_page), label: "Contato"),
         ],
       ),
     );

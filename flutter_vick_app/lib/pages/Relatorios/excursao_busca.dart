@@ -8,46 +8,42 @@ import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
 import '../../model/excursaoModel.dart';
 
-class HomePageBusca extends StatefulWidget {
-  const HomePageBusca({Key? key}) : super(key: key);
+class ExcursaoBusca extends StatefulWidget {
+  //const ExcursaoBusca({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _ExcursaoBusca createState() => _ExcursaoBusca();
 }
 
-class _HomePageState extends State<HomePageBusca> {
-  // This holds a list of fiction users
-  // You can use data fetched from a database or a server as well
+class _ExcursaoBusca extends State<ExcursaoBusca> {
   late List<ExcursaoModel>? _allUsers = [];
   //  {"id": 10, "name": "Becky", "age": 32},
 
+  late List<ExcursaoModel>? _foundUsers = [];
+
   void _getData() async {
     _allUsers = (await ApiService().getExcursao())!;
-    Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
+    Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {
+          _foundUsers = _allUsers;
+        }));
   }
 
-  // This list holds the data for the list view
-  late List<ExcursaoModel>? _foundUsers = [];
   @override
   initState() {
-    // at the beginning, all users are shown
     super.initState();
     _getData();
     _foundUsers = _allUsers;
   }
 
-  // This function is called whenever the text field changes
   void _runFilter(String enteredKeyword) {
     late List<ExcursaoModel>? results = [];
     if (enteredKeyword.isEmpty) {
-      // if the search field is empty or only contains white-space, we'll display all users
       results = _allUsers;
     } else {
       results = _allUsers!
           .where((user) =>
               user.nome.toLowerCase().contains(enteredKeyword.toLowerCase()))
           .toList();
-      // we use the toLowerCase() method to make it case-insensitive
     }
 
     // Refresh the UI
@@ -72,7 +68,7 @@ class _HomePageState extends State<HomePageBusca> {
             TextField(
               onChanged: (value) => _runFilter(value),
               decoration: const InputDecoration(
-                  labelText: 'Search', suffixIcon: Icon(Icons.search)),
+                  labelText: 'Pesquisar', suffixIcon: Icon(Icons.search)),
             ),
             const SizedBox(
               height: 20,
@@ -98,7 +94,7 @@ class _HomePageState extends State<HomePageBusca> {
                       ),
                     )
                   : const Text(
-                      'No results found',
+                      'Nenhum resultado encontrado',
                       style: TextStyle(fontSize: 24),
                     ),
             ),

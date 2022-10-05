@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vick_app/pages/Cadastros/makedeal.dart';
+import 'package:flutter_vick_app/pages/Cadastros/pessoas.dart';
+import 'package:flutter_vick_app/pages/Cadastros/reserva.dart';
+import 'package:flutter_vick_app/pages/Gerais/viagem.dart';
+import 'package:flutter_vick_app/pages/Navegacao/navegacaopadrao.dart';
 import 'package:flutter_vick_app/pages/Relatorios/cliente.dart';
 import 'package:flutter_vick_app/pages/Navegacao/navegacao.dart';
-import 'package:flutter_vick_app/pages/Relatorios/clientes_busca.dart';
+import 'package:flutter_vick_app/pages/Relatorios/cliente_busca.dart';
+import 'package:flutter_vick_app/pages/Relatorios/excursao_busca.dart';
 import 'package:flutter_vick_app/pages/Relatorios/homebusca.dart';
 import 'package:flutter_vick_app/pages/Relatorios/pagamento.dart';
 import 'package:flutter_vick_app/pages/Relatorios/usuarios.dart';
+import 'package:flutter_vick_app/pages/Relatorios/usuarios_busca.dart';
 
 import 'pages/Relatorios/excursao.dart';
 
@@ -29,8 +36,12 @@ class PrimeiraRota extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomePageFind()),
+              MaterialPageRoute(builder: (context) => MakeDeal()),
             );
+            /*Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => NavegacaoPadrao()),
+            );*/
           },
         ),
       ),
