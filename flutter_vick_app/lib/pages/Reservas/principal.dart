@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vick_app/pages/Contato/contato.dart';
+import 'package:flutter_vick_app/pages/Gerais/viagem.dart';
 import 'package:flutter_vick_app/pages/Reservas/home.dart';
 import 'package:flutter_vick_app/pages/Widgets/icones.dart';
 
@@ -8,6 +10,7 @@ class MainScreenViagem extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreenViagem> {
+  int _indiceAtual = 0;
   late PageController _pageController;
   int _page = 0;
 
@@ -18,22 +21,19 @@ class _MainScreenState extends State<MainScreenViagem> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: List.generate(4, (index) => HomeViagem()),
+        children: List.generate(3, (index) => HomeViagem()),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 5.0),
-            barIcon(icon: Icons.home, page: 0),
-            barIcon(icon: Icons.favorite, page: 1),
-            barIcon(icon: Icons.mode_comment, page: 2, badge: true),
-            barIcon(icon: Icons.person, page: 3),
-            SizedBox(width: 5.0),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _indiceAtual,
+        onTap: onTabTapped,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.calendar_today), label: "Reservas"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.card_travel), label: "Viagens"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.contact_page), label: "Contato"),
+        ],
       ),
     );
   }
@@ -52,6 +52,37 @@ class _MainScreenState extends State<MainScreenViagem> {
   void dispose() {
     super.dispose();
     _pageController.dispose();
+  }
+
+  void onTabTapped(int index) {
+    setState(() {
+      _indiceAtual = index;
+    });
+
+    switch (_indiceAtual) {
+      case 0:
+        break;
+      case 1:
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return Travel();
+            },
+          ),
+        );
+        break;
+      case 2:
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return Contato();
+            },
+          ),
+        );
+        break;
+      default:
+        print("ERRO");
+    }
   }
 
   void onPageChanged(int page) {

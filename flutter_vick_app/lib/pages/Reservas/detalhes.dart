@@ -31,7 +31,7 @@ class Details extends StatelessWidget {
         children: <Widget>[
           SizedBox(height: 10.0),
           buildSlider(),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           ListView(
             padding: EdgeInsets.symmetric(horizontal: 20),
             primary: false,
@@ -97,11 +97,11 @@ class Details extends StatelessWidget {
                   textAlign: TextAlign.left,
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 20),
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Details",
+                  "Detalhes",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
@@ -122,17 +122,67 @@ class Details extends StatelessWidget {
                   textAlign: TextAlign.left,
                 ),
               ),
+              SizedBox(height: 20),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Roteiro",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                  maxLines: 1,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "${places[indice]["roteiro"]}",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 15.0,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "O que inclui",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                  maxLines: 1,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "${places[indice]["incluso"]}",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 15.0,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
               Container(
                 margin: EdgeInsets.fromLTRB(0, 40, 0, 2),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Image.asset('imagens/zl.jpg'),
-                    Image.asset('imagens/couve.jpg'),
+                    Image.asset("${places[indice]["fotos"][0]}"),
+                    Image.asset("${places[indice]["fotos"][1]}"),
                     /*Image.asset('imagens/povo.jpg',
                                   height: 50, width: 50, fit: BoxFit.cover),*/
-                    Image.asset('imagens/cur1.jpg'),
-                    Image.asset('imagens/dlc.jpg'),
+                    Image.asset("${places[indice]["fotos"][2]}"),
+                    Image.asset("${places[indice]["fotos"][3]}"),
                   ],
                 ),
               ),
