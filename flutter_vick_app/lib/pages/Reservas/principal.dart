@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vick_app/pages/Contato/contato.dart';
+import 'package:flutter_vick_app/pages/Gerais/comopagar.dart';
 import 'package:flutter_vick_app/pages/Gerais/viagem.dart';
 import 'package:flutter_vick_app/pages/Reservas/home.dart';
 import 'package:flutter_vick_app/pages/Widgets/icones.dart';
@@ -28,7 +29,7 @@ class _MainScreenState extends State<MainScreenViagem> {
         onTap: onTabTapped,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_today), label: "Reservas"),
+              icon: Icon(Icons.payment), label: "Como Pagar"),
           BottomNavigationBarItem(
               icon: Icon(Icons.card_travel), label: "Viagens"),
           BottomNavigationBarItem(
@@ -61,6 +62,13 @@ class _MainScreenState extends State<MainScreenViagem> {
 
     switch (_indiceAtual) {
       case 0:
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return ComoPagar();
+            },
+          ),
+        );
         break;
       case 1:
         Navigator.of(context).push(

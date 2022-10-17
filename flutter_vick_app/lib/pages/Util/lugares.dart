@@ -131,7 +131,7 @@ List places = [
     "name":
         "Por do Sol no Mirante Pedra Vista Bela + Bueno Brandão - MG - 05/11 - Embarque: 06h30 - Retorno - 20h30 ",
     "img": "imagens/campos.jpg",
-    "price": r"R$160",
+    "price": r"R$ 160,00",
     "location": "Bueno Brandão - MG",
     "details":
         "Vamos vivenciar esta experiência de assistir o Por Do Sol ao som de um violinista ....",

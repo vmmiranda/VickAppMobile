@@ -3,6 +3,7 @@ import 'package:flutter_vick_app/pages/Cadastros/makedeal.dart';
 import 'package:flutter_vick_app/pages/Cadastros/pessoas.dart';
 import 'package:flutter_vick_app/pages/Cadastros/reserva.dart';
 import 'package:flutter_vick_app/pages/Contato/contato.dart';
+import 'package:flutter_vick_app/pages/Gerais/comopagar.dart';
 import 'package:flutter_vick_app/pages/Gerais/viagem.dart';
 import 'package:flutter_vick_app/pages/Navegacao/navegacaopadrao.dart';
 import 'package:flutter_vick_app/pages/Relatorios/cliente.dart';
@@ -23,7 +24,7 @@ void main() {
   runApp(MaterialApp(
     title: 'Navegação Básica',
     theme: ThemeData(primarySwatch: Colors.blue),
-    home: PrimeiraRota(),
+    home: MainScreenViagem(),
   ));
 }
 
@@ -38,14 +39,14 @@ class PrimeiraRota extends StatelessWidget {
         child: RaisedButton(
           child: Text('Clientes'),
           onPressed: () {
-            Navigator.push(
+            /*Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ComoPagar()),
+            );*/
+            Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => MainScreenViagem()),
             );
-            /*Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => NavegacaoPadrao()),
-            );*/
           },
         ),
       ),

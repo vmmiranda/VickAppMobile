@@ -9,6 +9,7 @@ class HomeViagem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(" Vick Viagens, seja bem vindo! Promoções"),
         actions: <Widget>[
           IconButton(
             icon: Icones(
@@ -20,16 +21,6 @@ class HomeViagem extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text(
-              "Bem vindo! Promoções",
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
           buildHorizontalList(context),
           buildVerticalList(),
         ],
