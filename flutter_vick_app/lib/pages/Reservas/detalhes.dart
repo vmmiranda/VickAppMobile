@@ -12,6 +12,7 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(" Detalhes Evento"),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,

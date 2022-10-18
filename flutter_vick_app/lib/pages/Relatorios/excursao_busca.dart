@@ -56,7 +56,7 @@ class _ExcursaoBusca extends State<ExcursaoBusca> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Busca de Clientes'),
+        title: const Text('Busca de Eventos'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),

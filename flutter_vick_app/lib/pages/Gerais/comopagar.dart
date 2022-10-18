@@ -54,7 +54,7 @@ class _ComoPagar extends State<ComoPagar> with TickerProviderStateMixin {
             child: Card(
                 child: Container(
               padding: EdgeInsets.all(2.0),
-              width: 500,
+              //width: 500,
               child: Column(
                 children: <Widget>[
                   Container(

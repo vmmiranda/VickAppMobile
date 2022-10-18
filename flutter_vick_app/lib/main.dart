@@ -5,6 +5,9 @@ import 'package:flutter_vick_app/pages/Cadastros/reserva.dart';
 import 'package:flutter_vick_app/pages/Contato/contato.dart';
 import 'package:flutter_vick_app/pages/Gerais/comopagar.dart';
 import 'package:flutter_vick_app/pages/Gerais/viagem.dart';
+import 'package:flutter_vick_app/pages/Login/login.dart';
+import 'package:flutter_vick_app/pages/Navegacao/lista_cadastro.dart';
+import 'package:flutter_vick_app/pages/Navegacao/lista_relatorios.dart';
 import 'package:flutter_vick_app/pages/Navegacao/navegacaopadrao.dart';
 import 'package:flutter_vick_app/pages/Relatorios/cliente.dart';
 import 'package:flutter_vick_app/pages/Navegacao/navegacao.dart';
@@ -22,9 +25,9 @@ import 'pages/Relatorios/excursao.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Navegação Básica',
+    title: 'Vick Viagens',
     theme: ThemeData(primarySwatch: Colors.blue),
-    home: MainScreenViagem(),
+    home: LoginPage(),
   ));
 }
 

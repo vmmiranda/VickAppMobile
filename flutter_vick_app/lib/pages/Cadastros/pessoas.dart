@@ -43,7 +43,7 @@ class _PessoasCadastro extends State<PessoasCadastro> {
             child: Card(
                 child: Container(
                     padding: EdgeInsets.all(2.0),
-                    width: 440,
+                    //width: 500,
                     child: Column(
                       children: <Widget>[
                         Container(

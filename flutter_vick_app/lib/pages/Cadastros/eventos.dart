@@ -6,15 +6,15 @@ import 'package:flutter_vick_app/service/api_service.dart';
 enum Gender { masculino, feminino }
 enum Status { positivo, negativo }
 
-class MakeDeal extends StatefulWidget {
-  MakeDeal();
+class CadastroEventos extends StatefulWidget {
+  CadastroEventos();
 
   @override
-  _MakeDeal createState() => _MakeDeal();
+  _CadastroEventos createState() => _CadastroEventos();
 }
 
-class _MakeDeal extends State<MakeDeal> {
-  _MakeDeal();
+class _CadastroEventos extends State<CadastroEventos> {
+  _CadastroEventos();
 
   @override
   void initState() {
@@ -73,7 +73,7 @@ class _MakeDeal extends State<MakeDeal> {
             child: Card(
                 child: Container(
                     padding: EdgeInsets.all(10.0),
-                    //width: 340,
+                    width: 340,
                     child: Column(
                       children: <Widget>[
                         Container(

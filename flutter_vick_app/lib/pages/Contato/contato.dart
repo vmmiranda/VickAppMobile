@@ -21,7 +21,7 @@ class Contato extends StatelessWidget {
         child: Card(
             child: Container(
                 padding: EdgeInsets.all(2.0),
-                width: 550,
+                //width: 550,
                 child: Column(
                   children: <Widget>[
                     Container(
@@ -88,12 +88,52 @@ class Contato extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          Image.asset('imagens/zl.jpg'),
-                          Image.asset('imagens/couve.jpg'),
+                          Image.asset('imagens/cont_st.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          Image.asset('imagens/cont_couv.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
                           /*Image.asset('imagens/povo.jpg',
                                   height: 50, width: 50, fit: BoxFit.cover),*/
-                          Image.asset('imagens/cur1.jpg'),
-                          Image.asset('imagens/dlc.jpg'),
+                          Image.asset('imagens/cur1.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          Image.asset('imagens/cont_trind.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 40, 0, 2),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Image.asset('imagens/zl.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          Image.asset('imagens/cont_bur6.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          /*Image.asset('imagens/povo.jpg',
+                                  height: 50, width: 50, fit: BoxFit.cover),*/
+                          Image.asset('imagens/cont_bur7.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          Image.asset('imagens/cont_bur8.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 40, 0, 2),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Image.asset('imagens/cont_bur1.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          Image.asset('imagens/couve.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          /*Image.asset('imagens/povo.jpg',
+                                  height: 50, width: 50, fit: BoxFit.cover),*/
+                          Image.asset('imagens/cont_bur5.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
+                          Image.asset('imagens/cont_bur2.jpg',
+                              height: 145, width: 175, fit: BoxFit.cover),
                         ],
                       ),
                     ),
